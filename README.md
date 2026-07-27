@@ -1,37 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# todo-list
 
-## Getting Started
+Une application de liste de tâches (todo list) simple et interactive, faite avec [Next.js](https://nextjs.org).
 
-First, run the development server:
+## Ce que fait l'app
+
+- Ajouter une tâche avec une priorité (Basse / Normale / Haute)
+- Cocher une tâche comme terminée
+- Modifier ou supprimer une tâche
+- Filtrer : Toutes / Actives / Terminées
+- Les tâches sont sauvegardées automatiquement dans le navigateur (elles restent après avoir fermé la page)
+
+## Comment lancer l'app sur son ordinateur
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Puis ouvrir [http://localhost:3000](http://localhost:3000) dans le navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comment est organisé le dossier
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/app/
+  page.tsx       -> la page d'accueil (affiche l'app)
+  TodoApp.tsx     -> tout le fonctionnement de la todo list (le vrai code de l'app)
+  layout.tsx      -> le cadre commun à toutes les pages (titre, police...)
+  globals.css     -> les couleurs et le style général
 
-## Learn More
+public/           -> les images/icônes du site
 
-To learn more about Next.js, take a look at the following resources:
+package.json      -> la liste des outils utilisés par le projet
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# todo-list
+Les autres fichiers à la racine (`tsconfig.json`, `eslint.config.mjs`, `next.config.ts`, `postcss.config.mjs`) sont des fichiers de configuration technique générés automatiquement par Next.js — pas besoin d'y toucher.
